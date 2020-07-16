@@ -1,0 +1,143 @@
+<!-- Question 2:
+Explain with examples the remaining methods of String and Array -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT DAY 2</title>
+</head>
+
+<body>
+    <h2>ASSIGNMENT  DAY 2</h2>
+    <h2><u>METHODS IN ARRAYS</u></h2>
+    <script>
+
+
+        // Create an Array
+        let fruits = ['Papaya', 'Banana'];
+        console.log(fruits.length);
+
+
+        // Access an Array item using the index position
+        let first = fruits[0];
+        console.log(first);
+        let last = fruits[(fruits.length) - 1];
+        console.log(last);
+
+
+        // Loop over an Array
+        fruits.forEach(function (item, index, array) {
+            console.log(item, index);
+        })
+
+
+        // Add an item to the end of an Array
+        let newLength = fruits.push('Orange');
+        console.log(fruits);
+
+
+        // Remove an item from the end of an Array
+        console.log(fruits.pop());
+
+
+        // Remove an item from the beginning of an Array
+        console.log(fruits.shift());
+
+
+        // Add an item to the beginning of an Array
+        let newLength1 = fruits.unshift('Strawberry');
+        console.log(fruits);
+
+
+
+        // Find the index of an item in the Array         
+        console.log(fruits.indexOf('Banana'));
+
+
+        // Remove items from an index position
+        let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Brinjal'];
+        console.log(vegetables);
+
+
+        let position = 1
+        let number = 2
+        let removedItems = vegetables.splice(position, number)
+        // this is how to remove items, n defines the number of items to be removed,
+        // starting at the index position specified by pos and progressing toward the end of array.
+
+        console.log(vegetables)
+        // ["Cabbage", "Brinjal"] (the original array is changed)
+
+        console.log(removedItems)
+        // ["Turnip", "Radish"]
+
+
+        // Copy an Array
+        let shallowCopy = fruits.slice() // this is how to make a copy
+        // ["Strawberry", "Papaya"]
+
+    </script>
+    <h2>ASSIGNMENT  DAY 2</h2>
+    <h2><u>METHODS IN STRINGS</u></h2>
+    <script>
+        // The JavaScript String charAt() method returns the character at the given index.
+        let str = "javascript";
+        console.log(str.charAt(2));
+
+
+        // The JavaScript String concat(str) method concatenates or joins two strings.
+        let s1 = "javascript ";
+        let s2 = "concat example";
+        let s3 = s1.concat(s2);
+        console.log(s3);
+
+
+        // The JavaScript String indexOf(str) method returns the index position of the given string.
+        let s4 = "javascript from javatpoint indexof";
+        let n = s4.indexOf("from");
+        console.log(n);
+
+
+        // The JavaScript String lastIndexOf(str) method returns the last index position of the given string. 
+        let s5 = "javascript from javatpoint indexof";
+        let n1 = s5.lastIndexOf("java");
+        console.log(n1);
+
+
+        //The JavaScript String toLowerCase() method returns the given string in lowercase letters.         
+        let s6 = "JavaScript toLowerCase Example";
+        let s7 = s1.toLowerCase();
+        console.log(s7);
+
+
+        // The JavaScript String toUpperCase() method returns the given string in uppercase letters.        
+        let s8 = "JavaScript toUpperCase Example";
+        let s9 = s8.toUpperCase();
+        console.log(s8);
+
+
+        // The JavaScript String slice(beginIndex, endIndex) method returns the parts of string from given beginIndex to endIndex.
+        // In slice() method, beginIndex is inclusive and endIndex is exclusive.        
+        let s10 = "abcdefgh";
+        let s11 = s10.slice(2, 5);
+        console.log(s11);
+
+
+        // The JavaScript String trim() method removes leading and trailing whitespaces from the string.        
+        let s12 = "     javascript trim    ";
+        let s13 = s12.trim();
+        console.log(s13);
+
+
+        // JavaScript String split() Method      
+        let str1 = "This is JavaTpoint website";
+        console.log(str1.split(" ")); //splits the given string.  
+
+
+    </script>
+
+</body>
+
+</html>
